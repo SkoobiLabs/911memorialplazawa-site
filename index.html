@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9/11 Memorial Plaza, Milton</title>
+<meta name="description" content="A column of World Trade Center steel stands in Triangle Park, Milton, Washington. The steel, the story, how to visit, and the remembrance held every September 11 at 5:46 am.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* ---------------------------------------------------------------------
+   9/11 Memorial Plaza, Milton WA. One long page, dark-first.
+   Palette is the steel's own: oxidised iron on near-black, bone text.
+   Edit content in the <section> blocks below; styles stay up here.
+   --------------------------------------------------------------------- */
+:root{
+  --bg:#15171a; --bg-2:#1c1f23; --surface:#22262b; --rule:#363b42;
+  --ink:#e9e4da; --ink-2:#bdb6aa; --muted:#8c8578;
+  --rust:#c4572b; --rust-ink:#fff4ec; --rust-soft:rgba(196,87,43,.14);
+  --steel:#9aa3ad;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --wrap:1120px; --gutter:clamp(16px,4vw,40px);
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --bg:#f3efe7; --bg-2:#ebe6dc; --surface:#faf7f1; --rule:#d9d2c5;
+  --ink:#1b1b1a; --ink-2:#4a4741; --muted:#7a7467;
+  --rust:#a8441c; --rust-ink:#fff6ef; --rust-soft:rgba(168,68,28,.10);
+  --steel:#5e6770; color-scheme:light}}
+:root[data-theme="light"]{
+  --bg:#f3efe7; --bg-2:#ebe6dc; --surface:#faf7f1; --rule:#d9d2c5;
+  --ink:#1b1b1a; --ink-2:#4a4741; --muted:#7a7467;
+  --rust:#a8441c; --rust-ink:#fff6ef; --rust-soft:rgba(168,68,28,.10);
+  --steel:#5e6770; color-scheme:light}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scrollbar-gutter:stable}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.55; overflow-x:hidden; -webkit-font-smoothing:antialiased}
+img{max-width:100%; height:auto; display:block}
+a{color:var(--rust); text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--rust); outline-offset:3px}
+h1,h2,h3{font-family:var(--display); font-weight:400; line-height:1.08; margin:0; text-wrap:balance; letter-spacing:-.005em}
+h1{font-size:clamp(40px,7vw,78px); font-weight:300}
+h2{font-size:clamp(30px,4.2vw,46px)}
+h3{font-size:22px; font-weight:500}
+p{margin:0 0 1em; max-width:62ch}
+.wrap{max-width:var(--wrap); margin:0 auto; padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--rust); margin:0 0 14px}
+section{padding-block:clamp(56px,9vw,112px); border-top:1px solid var(--rule)}
+section .lede{font-size:clamp(19px,2.1vw,23px); color:var(--ink-2); font-family:var(--display); font-weight:400; max-width:52ch}
+h2 + .lede{margin-top:18px}
+
+/* nav */
+.nav{position:sticky; top:0; z-index:5; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:60px}
+.brand{display:flex; align-items:center; gap:12px; color:var(--ink); text-decoration:none; font-family:var(--display); font-size:19px; letter-spacing:.01em}
+.brand svg{width:26px; height:26px; flex:none}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:22px}
+.nav li a{color:var(--ink-2); text-decoration:none; font-size:15px; font-weight:500; padding:10px 0; display:inline-block}
+.nav li a:hover{color:var(--ink)}
+@media (max-width:720px){.nav ul{display:none}}
+
+/* hero */
+.hero{border-top:0; padding-block:clamp(40px,7vw,96px) clamp(40px,6vw,80px)}
+.hero .wrap{display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:clamp(24px,5vw,72px); align-items:end}
+.hero .place{font-family:var(--mono); color:var(--steel); font-size:13px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 22px}
+.hero h1 em{font-style:italic; color:var(--rust); font-weight:300}
+.hero .lede{margin-top:26px}
+.hero .cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:30px}
+.btn{display:inline-flex; align-items:center; justify-content:center; height:48px; padding:0 22px; border-radius:4px; font-weight:600; font-size:16px; text-decoration:none; border:1px solid transparent; white-space:nowrap}
+.btn-primary{background:var(--rust); color:var(--rust-ink)}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{border-color:var(--rule); color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink-2)}
+.drawing{position:relative; background:var(--surface); border:1px solid var(--rule); padding:18px 18px 14px; border-radius:4px}
+.drawing img{filter:invert(1) contrast(1.05) brightness(.95); mix-blend-mode:screen; opacity:.92}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .drawing img{filter:none; mix-blend-mode:multiply; opacity:1}}
+:root[data-theme="light"] .drawing img{filter:none; mix-blend-mode:multiply; opacity:1}
+.drawing figcaption{font-family:var(--mono); font-size:12px; color:var(--muted); margin-top:12px; line-height:1.5}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr} .hero .drawing{max-width:420px}}
+
+/* the steel: spec table */
+.spec{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); margin-top:36px}
+.spec div{background:var(--surface); padding:20px 22px}
+.spec dt{font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 8px}
+.spec dd{margin:0; font-family:var(--display); font-size:26px; line-height:1.15; font-variant-numeric:tabular-nums}
+.spec dd small{display:block; font-family:var(--body); font-size:15px; color:var(--ink-2); margin-top:6px}
+.two{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(24px,5vw,72px); align-items:start}
+@media (max-width:900px){.spec{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.spec{grid-template-columns:1fr}}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+
+/* timeline */
+.timeline{list-style:none; margin:40px 0 0; padding:0; border-left:1px solid var(--rule)}
+.timeline li{position:relative; padding:0 0 30px 32px}
+.timeline li::before{content:""; position:absolute; left:-5px; top:9px; width:9px; height:9px; border-radius:50%; background:var(--rust)}
+.timeline time{font-family:var(--mono); font-size:13px; color:var(--rust); letter-spacing:.08em; display:block; margin-bottom:4px}
+.timeline p{margin:0; color:var(--ink-2)}
+.timeline strong{color:var(--ink); font-weight:600}
+
+/* visit */
+.visit-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(24px,5vw,72px); align-items:start}
+@media (max-width:860px){.visit-grid{grid-template-columns:1fr}}
+.card{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:26px 28px}
+.card h3{margin-bottom:10px}
+.card p:last-child{margin-bottom:0}
+address{font-style:normal; font-family:var(--display); font-size:24px; line-height:1.3}
+.minute{font-family:var(--display); font-size:clamp(48px,8vw,96px); line-height:1; color:var(--rust); font-weight:300; margin:8px 0 10px; font-variant-numeric:tabular-nums}
+
+/* people */
+.people{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px 40px; margin-top:36px}
+.people h3{font-size:19px; margin-bottom:6px}
+.people p{color:var(--ink-2); font-size:16px; margin:0}
+
+/* footer */
+footer{border-top:1px solid var(--rule); padding:40px 0 48px; color:var(--muted); font-size:14px}
+footer .wrap{display:flex; flex-wrap:wrap; gap:14px 36px; justify-content:space-between; align-items:center}
+footer a{color:var(--ink-2)}
+textarea{resize:none; field-sizing:content}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Page">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="9/11 Memorial Plaza, Milton">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><path d="M11 1h4l-1 24h-2z" fill="var(--rust)"/><path d="M5 25h16" stroke="var(--ink-2)" stroke-width="1.5"/></svg>
+      9/11 Memorial Plaza
+    </a>
+    <ul>
+      <li><a href="#steel">The steel</a></li>
+      <li><a href="#story">The story</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#remembrance">Remembrance</a></li>
+      <li><a href="#people">The people</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- HERO ============================================================ -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="place">Triangle Park · Milton, Washington</p>
+      <h1>A column of the South Tower<br>stands in <em>Milton.</em></h1>
+      <p class="lede">Thirty-six feet of World Trade Center steel, raised in a small city's park so that anyone can walk up, put a hand on it, and remember.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#visit">Plan a visit</a>
+        <a class="btn btn-ghost" href="#remembrance">September 11, 5:46 am</a>
+      </div>
+    </div>
+    <figure class="drawing">
+      <img src="img/elevation-south.webp" width="1211" height="1790" alt="Elevation drawing of the memorial from the south: the bent steel column standing on its plaza beside three light bollards" loading="eager">
+      <figcaption>Elevation looking from the south. Artifact N-153 with structural support, 35′-5″ overall, on a 47′-2″ plaza.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- THE STEEL ======================================================= -->
+<section id="steel">
+  <div class="wrap">
+    <p class="eyebrow">The steel</p>
+    <h2>Window column 442, floors 91 to 94, Tower 2.</h2>
+    <p class="lede">The piece came from the upper floors of the South Tower, bent as it was found. It is among the larger pieces of the towers released to any community, and it stands here as it was found, on a steel support, with nothing added to it.</p>
+    <dl class="spec">
+      <div><dt>Artifact</dt><dd>N-153<small>Released by the Port Authority of New York and New Jersey</small></dd></div>
+      <div><dt>Origin</dt><dd>WTC Tower 2<small>Window column 442, floors 91 to 94</small></dd></div>
+      <div><dt>Steel</dt><dd>NIST C-48<small>Type C, S-5</small></dd></div>
+      <div><dt>Height</dt><dd>35′ 5″<small>Thirty-six feet of steel; the city's height limit is 35 feet</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- THE STORY ======================================================= -->
+<section id="story">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">The story</p>
+      <h2>Nine years, three cities, and thousands of phone calls.</h2>
+      <p class="lede">Jack Chandler asked for a piece of the towers in 2012. What arrived in 2015 was far larger than anyone had requested. It took three cities and six more years to stand it up.</p>
+    </div>
+    <ol class="timeline">
+      <li><time>2012</time><p><strong>The request.</strong> Jack Chandler applies to the Port Authority for a piece of World Trade Center steel for a memorial in Milton.</p></li>
+      <li><time>June 2015</time><p><strong>The call.</strong> Three years later: a piece is available, much larger than the one asked for. The cities of Fife, Milton and Edgewood agree to take it together.</p></li>
+      <li><time>2015</time><p><strong>The drive.</strong> Truck driver Mike Earhart hauls the column from JFK Airport to Milton, at cost.</p></li>
+      <li><time>November 2018</time><p><strong>The plan.</strong> Permit application filed with the City of Milton: a 35-foot memorial in a new plaza in Triangle Park, beside the Veterans Memorial. Sketches by Fife students shape the design.</p></li>
+      <li><time>January 2019</time><p><strong>The notice.</strong> The city issues notice of a complete application. Site plan, landscape and lighting plans follow.</p></li>
+      <li><time>September 11, 2021</time><p><strong>The dedication.</strong> Twenty years after the attacks, the steel is raised and the plaza is dedicated.</p></li>
+      <li><time>September 11, 2026</time><p><strong>Twenty-five years.</strong> The remembrance at 5:46 am marks a quarter century.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- VISIT =========================================================== -->
+<section id="visit">
+  <div class="wrap">
+    <p class="eyebrow">Visit</p>
+    <h2>Open every day. Walk up to it.</h2>
+    <div class="visit-grid" style="margin-top:36px">
+      <div class="card">
+        <h3>Where</h3>
+        <address>9/11 Memorial, Triangle Park<br>1400 15th Avenue<br>Milton, WA 98354</address>
+        <p style="margin-top:14px">The plaza sits in the northeast corner of the park, beside the Veterans Memorial. Park in the Veterans Memorial lot. The plaza is level and paved; the steel is lit at night.</p>
+        <p><a href="https://maps.apple.com/?q=1400+15th+Ave,+Milton,+WA+98354">Open in Maps</a></p>
+      </div>
+      <figure class="drawing">
+        <img src="img/site-plan.webp" width="1228" height="1913" alt="Site plan of Triangle Park showing the circular memorial plaza in the northeast corner next to the Veterans Memorial and parking" loading="lazy">
+        <figcaption>Site plan from the 2019 application. The round plaza at the top is the memorial; the Veterans Memorial and parking are below it.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- REMEMBRANCE ===================================================== -->
+<section id="remembrance">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Remembrance</p>
+      <h2>Every September 11, at the minute the first plane hit.</h2>
+      <p class="lede">8:46 am in New York is 5:46 am in Milton. VFW Posts 11401 and 2224 hold the ceremony at the plaza each year, before dawn. Everyone is welcome.</p>
+    </div>
+    <div class="card">
+      <p class="eyebrow" style="margin-bottom:0">Next ceremony</p>
+      <p class="minute">5:46 am</p>
+      <address>Friday, September 11, 2026<br>9/11 Memorial, Triangle Park</address>
+      <p style="margin-top:14px">Hosted by VFW Post 11401 and VFW Post 2224. Dress for the weather; the ceremony is outdoors and brief.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE PEOPLE ====================================================== -->
+<section id="people">
+  <div class="wrap">
+    <p class="eyebrow">The people</p>
+    <h2>Built by volunteers, kept by three cities.</h2>
+    <div class="people">
+      <div><h3>Jack Chandler</h3><p>Applied for the steel in 2012 and carried the project for nine years.</p></div>
+      <div><h3>Vernon, Creative Comfort</h3><p>Designed the memorial and its plaza.</p></div>
+      <div><h3>Fife students</h3><p>Their sketches, with art teacher Katy Baur, shaped the design.</p></div>
+      <div><h3>John Bastion</h3><p>Structural engineer. Designed the foundation that holds the column.</p></div>
+      <div><h3>The Jesse Company, Tacoma</h3><p>Stood the steel up.</p></div>
+      <div><h3>Mike Earhart</h3><p>Drove the column across the country from JFK Airport.</p></div>
+      <div><h3>VFW Posts 11401 and 2224</h3><p>Hold the remembrance every September 11.</p></div>
+      <div><h3>Cities of Milton, Fife and Edgewood</h3><p>Secured the artifact together and are its custodians.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>9/11 Memorial Plaza · Triangle Park, Milton, Washington</div>
+    <div>Memorial design by <a href="https://creativecomfort.net">Creative Comfort</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
